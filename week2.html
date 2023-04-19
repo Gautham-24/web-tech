@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>5j0</title>
+	<script type="text/javascript">
+		function count(){
+			var str = document.f1.ta.value;
+			var result = "";
+			var cnt_words = 1;
+			var cnt_chars = 0;
+			var cnt_lines = 1;
+			for( var i=0;i<str.length;i++){
+				var x = str.charAt(i)
+				if(x == ' ' || x == '\t')
+					cnt_words++;
+				else if(x == '\n'){
+					cnt_lines++;
+					cnt_words++;
+				}
+				else
+					cnt_chars++;
+			}
+			alert(`no of words = ${cnt_words} \n no of lines = ${cnt_lines} \nno of chars = ${cnt_chars}`)
+		}
+	</script>
+</head>
+<body bgcolor="aqua">
+	<center>
+		<h1>
+			words chars and lines<br><br>
+		</h1>
+		<h3>enter text:<br><br></h3>
+		<form name="f1">
+			<textarea rows="7" cols="100" name="ta" ></textarea><br>
+			<input type="submit" name="submit" onClick = "count()">
+		</form>
+	</center>
+</body>
+</html>
