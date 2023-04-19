@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>5J0</title>
+	<script type="text/javascript">
+		function sq(){
+			var num = Number(document.getElementById('tf1').value)
+			document.getElementById('tf2').value = num*num;
+		}
+		function sqrt(){
+			var num = Number(document.getElementById('tf1').value)
+			document.getElementById('tf2').value = Math.sqrt(num)
+		}
+		function ceil(){
+			var num = Number(document.getElementById('tf1').value)
+			document.getElementById('tf2').value = Math.ceil(num)
+		}
+		function floor(){
+			var num = Number(document.getElementById('tf1').value)
+			document.getElementById('tf2').value = Math.floor(num)
+		}
+	</script>
+</head>
+<body>
+	<form>
+		<label>Enter a number:</label>
+		<input type="text" id="tf1">
+		<br>
+		<label>result:</label>
+		<input type="text" id="tf2" readonly="true"><br>
+		<input type="button" id="b1" value="square" onClick="sq()">
+		<input type="button" id="b2" value="square root" onClick="sqrt()">
+		<input type="button" id="b3" value="ceil" onClick="ceil()">
+		<input type="button" id="b4" value="floor" onClick="floor()">
+		<input type="reset" name="reset">
+	</form>
+</body>
+</html>
